@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/pt_toolbar"
+        layout="@layout/pt_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:id="@+id/sv_edit_seller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_edit_finished"
+        android:layout_below="@+id/pt_toolbar">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/my_white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_seller_icon"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon" />
+
+            <TextView
+                android:id="@+id/tv_add_seller_icon"
+                style="@style/round_bg_tv"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="上传商家代表图片" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="40dp">
+
+                <!--商店名称-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商店名称"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@mipmap/seller_name" />
+
+                    <EditText
+                        android:id="@+id/et_seller_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gray_et_bg"
+                        android:hint="商店名称"
+                        android:paddingLeft="15dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="商家类型"
+                    android:textSize="18sp" />
+
+                <!--商店分类-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout style="@style/seller_type_rl">
+
+                        <ImageView
+                            style="@style/seller_type_icon"
+                            android:src="@mipmap/icon_cater" />
+
+                        <TextView
+                            style="@style/seller_type_tv"
+                            android:text="餐厅" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/seller_type_rl">
+
+                        <ImageView
+                            style="@style/seller_type_icon"
+                            android:src="@mipmap/icon_snack" />
+
+                        <TextView
+                            style="@style/seller_type_tv"
+                            android:text="小吃" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/seller_type_rl">
+
+                        <ImageView
+                            style="@style/seller_type_icon"
+                            android:src="@mipmap/icon_leisure" />
+
+                        <TextView
+                            style="@style/seller_type_tv"
+                            android:text="休闲" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/seller_type_rl">
+
+                        <ImageView
+                            style="@style/seller_type_icon"
+                            android:src="@mipmap/icon_service2" />
+
+                        <TextView
+                            style="@style/seller_type_tv"
+                            android:text="服务" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--RadioGroup-->
+
+                <RadioGroup
+                    android:id="@+id/rg_seller_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_hall"
+                        style="@style/seller_type_rb"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/rb_snack"
+                        style="@style/seller_type_rb"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:id="@+id/rb_enter"
+                        style="@style/seller_type_rb"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:id="@+id/rb_care"
+                        style="@style/seller_type_rb"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+                <!--商家描述-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="请为您的服务做一个有力的简述（限140字）" />
+
+                <EditText
+                    android:id="@+id/et_seller_desc"
+                    style="@style/et_gray_bg"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="~小林烧烤秉持创新的精神为每一位客人带来口感上的深刻体验"
+                    android:minLines="2"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+
+
+                <!--联系人-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系人"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:src="@mipmap/seller_contact" />
+
+                    <EditText
+                        android:id="@+id/et_seller_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gray_et_bg"
+                        android:hint="联系人姓名"
+                        android:paddingLeft="15dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!--电话-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=" 电话"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/seller_tel" />
+
+                    <EditText
+                        android:id="@+id/et_seller_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gray_et_bg"
+                        android:hint="联系人电话"
+                        android:paddingLeft="15dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!--位置-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=" 位置"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:src="@mipmap/seller_location" />
+
+                    <EditText
+                        android:id="@+id/et_seller_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/gray_et_bg"
+                        android:hint="商家具体位置"
+                        android:paddingLeft="15dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/map_seller"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="15dp"
+                    android:clickable="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_edit_finished"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/my_white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="编辑完成"
+        android:textColor="@drawable/gray_text_color_bg"
+        android:textSize="18sp" />
+
+</RelativeLayout>

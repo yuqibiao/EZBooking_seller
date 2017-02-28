@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_finished"
+        android:background="@color/my_white"
+        android:orientation="vertical">
+
+        <include layout="@layout/pt_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_add_goods"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/trans"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="新增  您的菜单选项"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/pt_add_goods"
+                    layout="@layout/pt_goods_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_add_finished"
+                    style="@style/round_bg_tv"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:text="完成新增"
+                    android:visibility="gone" />
+
+                <View
+                    style="@style/gray_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="现有菜单选择项"
+                    android:textSize="17sp" />
+
+                <com.yyyu.barbecue.ezbooking_base.ui.widget.NoScrollListView
+                    android:id="@+id/lv_type_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/trans"
+                    android:dividerHeight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_finished"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="编辑完成"
+        android:background="@color/my_white"
+        android:textColor="@drawable/gray_text_color_bg"
+        android:textSize="18sp" />
+
+</RelativeLayout>

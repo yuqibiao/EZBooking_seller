@@ -1,0 +1,67 @@
+<resources>
+
+    <!--Float pop 图片选择的动画-->
+    <style name="float_pic_choice">
+        <item name="android:windowEnterAnimation">@anim/float_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/float_pop_hidden</item>
+    </style>
+
+    <!--圆角背景TextView的Style-->
+    <style name="round_bg_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/round_text_bg</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textColor">@drawable/blue_tv_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--灰色背景的EditText-->
+    <style name="et_gray_bg">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/gray_et_bg</item>
+    </style>
+
+    <!--seller type-->
+    <style name="seller_type_rl">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="5dp"
+    <style name="seller_type_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    <style name="seller_type_icon">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="seller_type_rb">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawableBottom">@drawable/checkbox_bg</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:textColor">@color/my_blue</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:button">@null</item>
+    </style>
+
+
+</resources>
